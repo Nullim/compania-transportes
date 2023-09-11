@@ -1,0 +1,58 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h3 class="text-center">Modificar una novedad</h3>
+      <form action="/admin/novedades/modificar" method="POST" enctype="multipart/form-data">
+        <input type="hidden" value="{{ novedad.id }}" name="id">
+        <div class="form-group mb-4">
+          <label for="titulo"><i class="fas fa-quote-left"></i> Titulo</label>
+          <input 
+            type="text" 
+            class="form-control" 
+            placeholder="Ingrese un titulo (max 250 caracteres)" 
+            name="titulo"
+            value="{{ novedad.titulo }}"
+            required
+            >
+        </div>
+        <div class="form-group mb-4">
+          <label for="subtitulo"><i class="fas fa-quote-right"></i> Subtitulo</label>
+          <textarea 
+            class="form-control" 
+            rows="1" 
+            placeholder="Ingrese un subtitulo" 
+            name="subtitulo"
+            required
+            >{{ novedad.subtitulo }}</textarea>
+        </div>
+        <div class="form-group mb-4">
+          <label for="cuerpo"><i class="fas fa-file-lines"></i> Cuerpo</label>
+          <textarea 
+            class="form-control" 
+            rows="5" 
+            placeholder="Ingrese el cuerpo de la novedad" 
+            name="cuerpo"
+            required
+            >{{ novedad.cuerpo }}</textarea>
+        </div>
+        <div class="form-group mb-4">
+          <p>
+            <label for="imagen"><i class="fa-solid fa-image"></i> Imagen:</label>
+            <input type="file" name="imagen" id="imagen">
+          </p>
+          <p>
+            <label>
+              <input type="checkbox" name="borrar_imagen" id="borrar_imagen" value="1">
+              Borrar imagen?
+            </label>
+            <input type="hidden" name="imagen_original" value="{{ novedad.img_id }}">
+          </p>
+        </div>
+        <div class="btn-group mb-4" role="group">
+          <button type="submit" class="btn btn-success">Modificar</button>
+          <a href="/admin/novedades" type="button" class="btn btn-danger">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

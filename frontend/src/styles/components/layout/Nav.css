@@ -1,0 +1,35 @@
+.navbar{
+  display: flex;
+  justify-content: center;
+  border-bottom: solid white;
+}
+
+.navbar-list {
+  list-style-type: none;
+  display: inline-flex;
+  padding: 0.3%;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-item {
+  padding: 1rem;
+  transition: all 0.5s ease 0s;
+}
+
+.navbar-item:hover {
+  background-color: #384442;
+}
+
+.a {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-item a.activo {
+  text-decoration: none;
+  text-decoration-line: underline;
+  color: white;
+}

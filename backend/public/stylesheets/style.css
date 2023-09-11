@@ -1,0 +1,37 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.header-holder {
+  text-align: center;
+  background-color: #1251A0;
+  color: white;
+  padding-bottom: 1vh;
+}
+
+.usuario {
+  font-size: 3vh;
+}
+
+.title-transporte {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.subtitle-transporte {
+  font-weight: lighter;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-transporte {
+  display: flex;
+  justify-content: center;
+  font-style: oblique;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 3.5vh;
+  margin-top: auto;
+  background-color: lightgray;
+}
